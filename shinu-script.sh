@@ -52,8 +52,8 @@ if [ -e "$target1" ];
     wget https://raw.githubusercontent.com/noahclanman/basic-script/main/nohup.sh && chmod +x nohup.sh
     cd $home
     crontab -L > mycron
-    echo "0 * * * * /bin/sh /etc/shinu/remover.sh" >> mycron
-    echo "0 */12 */1 * * systemctl reboot -i" >> mycron
+    echo "* * * * * /bin/sh /etc/shinu/remover.sh" >> mycron
+    echo "* */12 */1 * * systemctl reboot -i" >> mycron
     echo "@reboot /bin/sh /etc/shinu/nohup.sh" >> mycron
     crontab mycron
     rm mycron
