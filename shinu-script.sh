@@ -386,6 +386,10 @@ connect = 127.0.0.1:5400
 [websocket5]
 accept = 2096
 connect = 127.0.0.1:5400
+
+[websocket6]
+accept = 9443
+connect = 127.0.0.1:5600
 EOFStunnel3
 
 echo -e "[\e[33mNotice\e[0m] Restarting Stunnel.."
