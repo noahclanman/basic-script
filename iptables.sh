@@ -9,9 +9,3 @@
     iptables -t nat -I PREROUTING -p tcp --dport 2086 -j REDIRECT --to-ports 5400
     iptables -t nat -I PREROUTING -p tcp --dport 2095 -j REDIRECT --to-ports 5400
     iptables -t nat -I PREROUTING -p tcp --dport 8280 -j REDIRECT --to-ports 5400
-    iptables -t nat -I PREROUTING -p tcp --dport 2053 -j REDIRECT --to-ports 5600
-    iptables -t nat -I PREROUTING -p tcp --dport 2083 -j REDIRECT --to-ports 5600
-    iptables -t nat -I PREROUTING -p tcp --dport 2087 -j REDIRECT --to-ports 5600
-    iptables -t nat -I PREROUTING -p tcp --dport 2096 -j REDIRECT --to-ports 5600
-    iptables -t nat -I PREROUTING -p tcp --dport 8443 -j REDIRECT --to-ports 5600
-    iptables -t nat -I PREROUTING -p tcp --dport 9443 -j REDIRECT --to-ports 5600
