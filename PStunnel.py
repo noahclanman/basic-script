@@ -2,14 +2,14 @@ import socket, threading, thread, select, signal, sys, time, getopt
 
 # CONFIG
 LISTENING_ADDR = '0.0.0.0'
-LISTENING_PORT = 9443
+LISTENING_PORT = 5600
 
 PASS = ''
 
 # CONST
 BUFLEN = 4096 * 4
 TIMEOUT = 60
-DEFAULT_HOST = '127.0.0.1:8089
+DEFAULT_HOST = '127.0.0.1:8085'
 RESPONSE = 'HTTP/1.1 101 Switching Protocols\r\n\r\n'
 
 
@@ -235,7 +235,7 @@ class ConnectionHandler(threading.Thread):
 def print_usage():
     print 'Usage: PStunnel.py -p <port>'
     print '       PStunnel.py -b <bindAddr> -p <port>'
-    print '       PStunnel.py -b 0.0.0.0 -p 9443'
+    print '       PStunnel.py -b 0.0.0.0 -p 5600'
 
 def parse_args(argv):
     global LISTENING_ADDR
@@ -245,35 +245,4 @@ def parse_args(argv):
         opts, args = getopt.getopt(argv,"hb:p:",["bind=","port="])
     except getopt.GetoptError:
         print_usage()
-        sys.exit(2)
-    for opt, arg in opts:
-        if opt == '-h':
-            print_usage()
-            sys.exit()
-        elif opt in ("-b", "--bind"):
-            LISTENING_ADDR = arg
-        elif opt in ("-p", "--port"):
-            LISTENING_PORT = int(arg)
-
-
-def main(host=LISTENING_ADDR, port=LISTENING_PORT):
-
-    print "\n:-------PythonProxy-------:\n"
-    print "Listening addr: " + LISTENING_ADDR
-    print "Listening port: " + str(LISTENING_PORT) + "\n"
-    print ":-------------------------:\n"
-
-    server = Server(LISTENING_ADDR, LISTENING_PORT)
-    server.start()
-
-    while True:
-        try:
-            time.sleep(2)
-        except KeyboardInterrupt:
-            print 'Stopping...'
-            server.close()
-            break
-
-if __name__ == '__main__':
-    parse_args(sys.argv[1:])
-    main()
+        sys.exi
