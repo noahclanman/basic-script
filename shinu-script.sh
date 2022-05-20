@@ -478,8 +478,7 @@ cat <<'Ohp1' > /etc/ohpserver/run
 /etc/ohpserver/ohpserver -port 8085 -proxy 127.0.0.1:25800 -tunnel 127.0.0.1:550 > /etc/ohpserver/dropbear.log &
 /etc/ohpserver/ohpserver -port 8086 -proxy 127.0.0.1:25800 -tunnel 127.0.0.1:225 > /etc/ohpserver/openssh.log &
 /etc/ohpserver/ohpserver -port 8087 -proxy 127.0.0.1:25800 -tunnel 127.0.0.1:110 > /etc/ohpserver/openvpn.log &
-/etc/ohpserver/ohpserver -port 8088 -proxy 127.0.0.1:25800 -tunnel 127.0.0.1:25980 > /etc/ohpserver/openvpn.log
-/etc/ohpserver/ohpserver -port 8089 -proxy 127.0.0.1:25800 -tunnel 127.0.0.1:443 > /etc/ohpserver/stunnel.log
+/etc/ohpserver/ohpserver -port 8088 -proxy 127.0.0.1:25800 -tunnel 127.0.0.1:25980 > /etc/ohpserver/openvpn.log &
 Ohp1
 chmod +x /etc/ohpserver/run
 
@@ -494,7 +493,6 @@ lsof -t -i tcp:8085 -s tcp:listen | xargs kill 2>/dev/null ### Dropbear
 lsof -t -i tcp:8086 -s tcp:listen | xargs kill 2>/dev/null ### OpenSSH
 lsof -t -i tcp:8087 -s tcp:listen | xargs kill 2>/dev/null ### OpenVPN TCP RSA
 lsof -t -i tcp:8088 -s tcp:listen | xargs kill 2>/dev/null ### OpenVPN TCP EC
-lsof -t -i tcp:8089 -s tcp:listen | xargs kill 2>/dev/null ### Stunnel
 Ohp2
 chmod +x /etc/ohpserver/stop
 
