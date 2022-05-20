@@ -479,7 +479,7 @@ cat <<'Ohp1' > /etc/ohpserver/run
 /etc/ohpserver/ohpserver -port 8086 -proxy 127.0.0.1:25800 -tunnel 127.0.0.1:225 > /etc/ohpserver/openssh.log &
 /etc/ohpserver/ohpserver -port 8087 -proxy 127.0.0.1:25800 -tunnel 127.0.0.1:110 > /etc/ohpserver/openvpn.log &
 /etc/ohpserver/ohpserver -port 8088 -proxy 127.0.0.1:25800 -tunnel 127.0.0.1:25980 > /etc/ohpserver/openvpn.log &
-/etc/ohpserver/ohpserver -port 8089 -proxy 127.0.0.1:25800 -tunnel 127.0.0.1:443 > /etc/ohpserver/stunnel.log &
+/etc/ohpserver/ohpserver -port 8089 -proxy 127.0.0.1:25800 -tunnel 127.0.0.1:443 > /etc/ohpserver/stunnel.log
 Ohp1
 chmod +x /etc/ohpserver/run
 
