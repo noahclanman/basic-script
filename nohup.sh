@@ -1,3 +1,4 @@
 cd /etc/shinu
-nohup python pdirect.py &
-nohup python popenvpn.py &
+nohup python PDirect.py &
+nohup python POpenvpn.py &
+nohup python PStunnel.py &
