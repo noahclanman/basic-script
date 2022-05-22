@@ -33,8 +33,8 @@ if [ -e "$target1" ];
     #rm /etc/shinu/*
     #rm -r /etc/shinu/*
     #rmdir /etc/shinu
-    iptables-restore < iptables.bkp
-    rm iptables.sh
+    iptables-restore < /etc/iptables/rules.v4.backup
+    rm /etc/iptables/rules.v4.backup
     wget https://raw.githubusercontent.com/noahclanman/basic-script/main/iptables.sh && chmod +x iptables.sh && ./iptables.sh
   else
     cd /etc && mkdir shinu && cd shinu
