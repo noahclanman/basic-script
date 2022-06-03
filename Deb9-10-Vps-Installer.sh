@@ -871,7 +871,7 @@ echo 'clear' > /etc/profile.d/bonv.sh
 echo 'screenfetch -p -A Debian | sed -r "/^\s*$/d" ' >> /etc/profile.d/bonv.sh
 chmod +x /etc/profile.d/bonv.sh
 
-echo '[Unit]
+echo "[Unit]
 Description=Bonveio Startup Script
 Before=network-online.target
 Wants=network-online.target
