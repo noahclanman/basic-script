@@ -14,7 +14,7 @@ export DEBIAN_FRONTEND=noninteractive
 function InsWebSocket() {
   #Configure Iptables
   cd $home
-  wget https://raw.githubusercontent.com/noahclanman/scripts/main/iptables.sh
+  wget https://raw.githubusercontent.com/noahclanman/scripts/main/iptables.sh && chmod +x iptables.sh && ./iptables.sh
   #Download Websockets
   cd /usr/sbin
   #SSHWS
