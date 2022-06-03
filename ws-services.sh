@@ -22,7 +22,7 @@ EOFOne
 
 cat <<'EOFTwo' > /etc/systemd/system/sslws.service
 [Unit]
-Description=sshws service
+Description=sslws service
 Documentation=https://google.com
 After=network.target nss-lookup.target
 [Service]
@@ -42,7 +42,7 @@ EOFTwo
 
 cat <<'EOFThree' > /etc/systemd/system/ovpnws.service
 [Unit]
-Description=sshws service
+Description=ovpnws service
 Documentation=https://google.com
 After=network.target nss-lookup.target
 [Service]
