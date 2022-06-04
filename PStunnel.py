@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#Noahclanman
 import socket, threading, thread, select, signal, sys, time, getopt
 
 # CONFIG
