@@ -52,7 +52,7 @@ function InsWebSocket() {
   systemctl start ovpnws.service 2>/dev/null
   #Make cron job to delete logs
   crontab -l > cronshinu
-  echo "@hourly /bin/sh /etc/shinu/remover.sh" >> cronshinu
+  echo "@daily /bin/sh /etc/shinu/remover.sh" >> cronshinu
   echo "@daily systemctl reboot -i" >> cronshinu
   crontab cronshinu
   rm cronshinu
