@@ -20,7 +20,7 @@ function InsWebSocket() {
     iptables-restore < /etc/iptables/rules.v4
     systemctl stop sshws.service && systemctl disable sshws.service 2>/dev/null
     systemctl stop sslws.service && systemctl disable sslws.service 2>/dev/null
-    systemctl stop ovpn.service && systemctl disable ovpnws.service 2>/dev/null
+    systemctl stop ovpnws.service && systemctl disable ovpnws.service 2>/dev/null
     rm /usr/sbin/*.py && rm /usr/sbin/*.sh && cd /etc/systemd/system && rm sshws.service && rm sslws.service && rm ovpnws.service && cd $home
     touch bukya && crontab bukya && rm bukya
   else
