@@ -379,7 +379,7 @@ TIMEOUTclose = 0
 
 [dropbear]
 accept = 443
-connect = 127.0.0.1:550
+connect = 127.0.0.1:5400
 
 [openssh]
 accept = 444
