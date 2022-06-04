@@ -1,5 +1,23 @@
 #!/bin/bash
 
+cat <<'EOFa' > /usr/sbin/sshws.sh
+#!/bin/bash
+nohup python PDirect.py > /dev/null 2>&1 &
+EOFa
+chmod +x /usr/sbin/sshws.sh
+
+cat <<'EOFb' > /usr/sbin/sslws.sh
+#!/bin/bash
+nohup python PStunnel.py > /dev/null 2>&1 &
+EOFb
+chmod +x /usr/sbin/sslws.sh
+
+cat <<'EOFc' > /usr/sbin/ovpnws.sh
+#!/bin/bash
+nohup python POpenvpn.py > /dev/null 2>&1 &
+EOFc
+chmod +x /usr/sbin/ovpnws.sh
+
 cat <<'EOFOne' > /etc/systemd/system/sshws.service
 [Unit]
 Description=sshws service
