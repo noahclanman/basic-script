@@ -28,20 +28,20 @@ function InsWebSocket() {
   fi
   #Configure Iptables
   cd $home
-  wget https://raw.githubusercontent.com/noahclanman/scripts/main/iptables.sh && chmod +x iptables.sh && ./iptables.sh > /dev/null 2>&1
+  wget https://raw.githubusercontent.com/noahclanman/scripts/main/iptables.sh && chmod +x iptables.sh && ./iptables.sh &> /dev/null
   #Download Websockets
   cd /usr/sbin
   #SSHWS
-  wget https://raw.githubusercontent.com/noahclanman/scripts/main/PDirect.py > /dev/null 2>&1
+  wget https://raw.githubusercontent.com/noahclanman/scripts/main/PDirect.py &> /dev/null
   #SSLWS
-  wget https://raw.githubusercontent.com/noahclanman/scripts/main/PStunnel.py > /dev/null 2>&1
+  wget https://raw.githubusercontent.com/noahclanman/scripts/main/PStunnel.py &> /dev/null
   #OVPNWS
-  wget https://raw.githubusercontent.com/noahclanman/scripts/main/POpenvpn.py > /dev/null 2>&1
+  wget https://raw.githubusercontent.com/noahclanman/scripts/main/POpenvpn.py &> /dev/null
   #Make it executable
   chmod +x PDirect.py && chmod +x PStunnel.py && chmod +x POpenvpn.py
   #Creating Services
   #This will create a services file to /etc/systemd/system
-  cd $home && wget https://raw.githubusercontent.com/noahclanman/scripts/main/ws-services.sh && chmod +x ws-services.sh && ./ws-services.sh > /dev/null 2>&1
+  cd $home && wget https://raw.githubusercontent.com/noahclanman/scripts/main/ws-services.sh && chmod +x ws-services.sh && ./ws-services.sh &> /dev/null
   #Reload services
   systemctl daemon-reload 2>/dev/null
   systemctl enable sshws.service 2>/dev/null
@@ -57,7 +57,7 @@ function InsWebSocket() {
   crontab cronshinu
   rm cronshinu
   #Extras
-  mkdir /etc/shinu && cd /etc/shinu && wget https://github.com/noahclanman/scripts/blob/main/remover.sh && chmod +x remover.sh
+  mkdir /etc/shinu && cd /etc/shinu && wget https://github.com/noahclanman/scripts/blob/main/remover.sh && chmod +x remover.sh &> /dev/null
   #Now all thing is done time to remove some file
   cd $home && rm iptables.sh && rm ws-services.sh
 }
