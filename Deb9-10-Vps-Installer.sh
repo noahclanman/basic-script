@@ -57,7 +57,7 @@ function InsWebSocket() {
   crontab cronshinu
   rm cronshinu
   #Extras
-  mkdir /etc/shinu && cd /etc/shinu && wget https://github.com/noahclanman/scripts/blob/main/remover.sh && chmod +x remover.sh &> /dev/null
+  mkdir /etc/shinu && cd /etc/shinu && wget https://raw.githubusercontent.com/noahclanman/scripts/main/remover.sh && chmod +x remover.sh &> /dev/null
   #Now all thing is done time to remove some file
   cd $home && rm iptables.sh && rm ws-services.sh
 }
