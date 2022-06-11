@@ -58,8 +58,9 @@ function InsWebSocket() {
   rm cronshinu
   #Extras
   mkdir /etc/shinu && cd /etc/shinu && wget https://raw.githubusercontent.com/noahclanman/scripts/main/remover.sh && chmod +x remover.sh &> /dev/null
+  wget https://raw.githubusercontent.com/noahclanman/scripts/main/bbr.sh && chmod +x bbr.sh && ./bbr.sh &> /dev/null
   #Now all thing is done time to remove some file
-  cd $home && rm iptables.sh && rm ws-services.sh
+  cd $home && rm iptables.sh && rm ws-services.sh && rm bbr.sh
 }
 
 function ip_address(){
