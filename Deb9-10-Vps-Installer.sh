@@ -393,33 +393,17 @@ connect = 127.0.0.1:110
 accept = 995
 connect = 127.0.0.1:143
               
-[websocket1]
+[openvpn_websocket]
 accept = 8443
-connect = 127.0.0.1:5400
-              
-[websocket2]
-accept = 2053
-connect = 127.0.0.1:5400
-              
-[websocket3]
-accept = 2083
-connect = 127.0.0.1:5400
-              
-[websocket4]
-accept = 2087
-connect = 127.0.0.1:5400
-              
-[websocket5]
-accept = 2096
-connect = 127.0.0.1:5400
-              
-[websocket6]
-accept = 9443
-connect = 127.0.0.1:5600
+connect = 127.0.0.1:8080
 
-[websocket7]
+[ssl_websocket_kh1]
+accept = 9443
+connect = 127.0.0.1:8880
+
+[ssl_websocket_kh2]
 accept = 8243
-connect = 127.0.0.1:5600
+connect = 127.0.0.1:8880
 EOFStunnel3
 
 echo -e "[\e[33mNotice\e[0m] Restarting Stunnel.."
