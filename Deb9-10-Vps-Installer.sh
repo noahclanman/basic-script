@@ -271,7 +271,6 @@ cat <<'EOFOpenSSH' > /etc/ssh/sshd_config
 # https://phcorner.net/threads/739298
 Port 22
 Port 225
-Port 2222
 ListenAddress 0.0.0.0
 Protocol 2
 HostKey /etc/ssh/ssh_host_rsa_key
@@ -380,7 +379,7 @@ TIMEOUTclose = 0
 
 [dropbear]
 accept = 443
-connect = 127.0.0.1:5400
+connect = 127.0.0.1:550
 
 [openssh]
 accept = 444
@@ -390,7 +389,7 @@ connect = 127.0.0.1:225
 accept = 587
 connect = 127.0.0.1:110
 
-[dropbear2]
+[pop3]
 accept = 995
 connect = 127.0.0.1:143
               
