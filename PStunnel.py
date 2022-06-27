@@ -3,14 +3,14 @@ import socket, threading, thread, select, signal, sys, time, getopt
 
 # CONFIG
 LISTENING_ADDR = '0.0.0.0'
-LISTENING_PORT = 5600
+LISTENING_PORT = 8880
 
 PASS = ''
 
 # CONST
 BUFLEN = 4096 * 4
 TIMEOUT = 60
-DEFAULT_HOST = '127.0.0.1:550'
+DEFAULT_HOST = '127.0.0.1:143'
 RESPONSE = 'HTTP/1.1 101 Switching Protocols\r\n\r\n'
 
 
@@ -167,21 +167,10 @@ class ConnectionHandler(threading.Thread):
             host = host[:i]
         else:
             if self.method=='CONNECT':
-                port = 443
-                port = 2053
-                port = 2083
-                port = 2087
-                port = 2096
-                port = 8443
+                port = 9443
+                port = 8243
             else:
-                port = 80
-                port = 8080
                 port = 8880
-                port = 2052
-                port = 2082
-                port = 2086
-                port = 2095
-                port = 5600
 
         (soc_family, soc_type, proto, _, address) = socket.getaddrinfo(host, port)[0]
 
@@ -236,7 +225,7 @@ class ConnectionHandler(threading.Thread):
 def print_usage():
     print 'Usage: PStunnel.py -p <port>'
     print '       PStunnel.py -b <bindAddr> -p <port>'
-    print '       PStunnel.py -b 0.0.0.0 -p 5600'
+    print '       PStunnel.py -b 0.0.0.0 -p 8880'
 
 def parse_args(argv):
     global LISTENING_ADDR
