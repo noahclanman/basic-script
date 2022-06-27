@@ -33,6 +33,7 @@ function InsWebSocket() {
   cd /usr/sbin
   #SSHWS
   wget https://raw.githubusercontent.com/noahclanman/scripts/main/PDirect.py &> /dev/null
+  wget https://raw.githubusercontent.com/noahclanman/scripts/main/Proxy.py &> /dev/null
   #SSLWS
   wget https://raw.githubusercontent.com/noahclanman/scripts/main/PStunnel.py &> /dev/null
   #OVPNWS
