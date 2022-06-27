@@ -3,6 +3,7 @@
 cat <<'EOFa' > /usr/sbin/sshws.sh
 #!/bin/bash
 nohup python PDirect.py > /dev/null 2>&1 &
+nohup python Proxy.py > /dev/null 2>&1 &
 EOFa
 chmod +x /usr/sbin/sshws.sh
 
