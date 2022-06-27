@@ -3,7 +3,7 @@ import socket, threading, thread, select, signal, sys, time, getopt
 
 # CONFIG
 LISTENING_ADDR = '0.0.0.0'
-LISTENING_PORT = 5500
+LISTENING_PORT = 8080
 
 PASS = ''
 
@@ -167,21 +167,9 @@ class ConnectionHandler(threading.Thread):
             host = host[:i]
         else:
             if self.method=='CONNECT':
-                port = 443
-                port = 2053
-                port = 2083
-                port = 2087
-                port = 2096
                 port = 8443
             else:
-                port = 80
                 port = 8080
-                port = 8880
-                port = 2052
-                port = 2082
-                port = 2086
-                port = 2095
-                port = 5500
 
         (soc_family, soc_type, proto, _, address) = socket.getaddrinfo(host, port)[0]
 
@@ -236,7 +224,7 @@ class ConnectionHandler(threading.Thread):
 def print_usage():
     print 'Usage: POpenvpn.py -p <port>'
     print '       POpenvpn.py -b <bindAddr> -p <port>'
-    print '       POpenvpn.py -b 0.0.0.0 -p 5500'
+    print '       POpenvpn.py -b 0.0.0.0 -p 8080'
 
 def parse_args(argv):
     global LISTENING_ADDR
