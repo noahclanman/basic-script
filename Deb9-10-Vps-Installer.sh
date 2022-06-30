@@ -398,6 +398,10 @@ connect = 127.0.0.1:143
 accept = 8443
 connect = 127.0.0.1:8080
 
+[ssl_websocket_8280]
+accept = 2053
+connect = 127.0.0.1:8280
+
 [ssl_websocket_kh1]
 accept = 9443
 connect = 127.0.0.1:8880
