@@ -139,6 +139,17 @@ else
  rm -f squid.deb
 fi
 
+## install squid3 if deb10
+if [ -e /etc/squid/squid.conf ];
+ then
+ echo -e "squid3 already installed"
+ else
+ # install squid3
+ cd $home && apt install squid3
+ # removing file squid.conf
+ rm /etc/squid/squid.conf
+fi
+
 if [[ "$(command -v privoxy)" ]]; then
  apt remove privoxy -y -f 2>/dev/null
  wget -qO /tmp/privoxy.deb 'https://download.sourceforge.net/project/ijbswa/Debian/3.0.28%20%28stable%29%20stretch/privoxy_3.0.28-1_amd64.deb'
