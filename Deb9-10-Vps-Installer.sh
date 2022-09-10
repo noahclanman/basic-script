@@ -389,12 +389,8 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 TIMEOUTclose = 0
 
-[websocket]
-accept = 443
-connect = 127.0.0.1:80
-
 [dropbear]
-accept = 445
+accept = 443
 connect = 127.0.0.1:550
 
 [openssh]
@@ -402,11 +398,11 @@ accept = 444
 connect = 127.0.0.1:225
 
 [openvpn]
-accept = 587
+accept = 995
 connect = 127.0.0.1:110
 
 [pop3]
-accept = 995
+accept = 993
 connect = 127.0.0.1:143
               
 [openvpn_websocket]
