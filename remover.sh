@@ -1,2 +1,2 @@
-rm /var/log/daemon.log
-rm /var/log/syslog
+cat /dev/null > /var/log/daemon.log
+cat /dev/null > /var/log/syslog
