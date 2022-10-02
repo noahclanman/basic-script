@@ -145,7 +145,7 @@ if [ -e /etc/squid/squid.conf ];
  echo -e "squid3 already installed"
  else
  # install squid3
- cd $home && apt install squid3
+ cd $home && apt install squid3 -y
  # removing file squid.conf
  rm /etc/squid/squid.conf
 fi
