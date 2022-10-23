@@ -10,4 +10,9 @@ iptables -t nat -I PREROUTING -p tcp --dport 2082 -j REDIRECT --to-ports 80
 iptables -t nat -I PREROUTING -p tcp --dport 2086 -j REDIRECT --to-ports 80
 iptables -t nat -I PREROUTING -p tcp --dport 2095 -j REDIRECT --to-ports 80
 iptables-save > /etc/iptables/rules.v4
+
+# resolve if after installing slowdns
 iptables-save > /etc/iptables/shinu-rules.v4
+# extra iptables options if have slowdns
+cat <<'LAMISA' > /etc/shinu
+LAMISA
