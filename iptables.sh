@@ -15,5 +15,6 @@ iptables-save > /etc/iptables/rules.v4
 iptables-save > /etc/iptables/shinu-rules.v4
 # extra iptables options if have slowdns
 cat <<'LAMISA' > /etc/shinu/slowdns-iptables.sh
-!/bin/bash
+#!/bin/bash
+iptables -A IN_public_allow -p tcp -m tcp --dport 10000 -m conntrack --ctstate NEW,UNTRACKED -j ACCEPT
 LAMISA
