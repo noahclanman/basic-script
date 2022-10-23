@@ -14,5 +14,6 @@ iptables-save > /etc/iptables/rules.v4
 # resolve if after installing slowdns
 iptables-save > /etc/iptables/shinu-rules.v4
 # extra iptables options if have slowdns
-cat <<'LAMISA' > /etc/shinu
+cat <<'LAMISA' > /etc/shinu/slowdns-iptables.sh
+!/bin/bash
 LAMISA
