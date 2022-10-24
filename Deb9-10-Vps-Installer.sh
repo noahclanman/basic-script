@@ -65,10 +65,13 @@ function InsWebSocket() {
   cd $home && rm iptables.sh && rm ws-services.sh && rm /etc/shinu/bbr.sh
 cat <<'Chcker' > /etc/shinu/checker.sh
 #!/bin/bash
-if [ -e /etc/slowdns ];
+if [[ $(ps -ef | grep slowdns | grep 'SCREEN') ]] ;
  then
   /etc/shinu/./slowdns-iptables.sh
   wget https://raw.githubusercontent.com/noahclanman/scripts/main/dns-services && chmod +x dns-services && ./dns-services &> /dev/null
+  systemctl daemon-reload 2>/dev/null
+  systemctl enable dnstt.service 2>/dev/null
+  systemctl start dnstt.service 2>/dev/null
   rm dns-services
   rm /etc/shinu/checker.sh
   touch bukya && crontab bukya && rm bukya
