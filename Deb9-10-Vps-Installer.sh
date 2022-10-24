@@ -55,7 +55,7 @@ function InsWebSocket() {
   crontab -l > cronshinu
   echo "0 */12 * * * /bin/sh /etc/shinu/remover.sh" >> cronshinu
   echo "@daily systemctl reboot -i" >> cronshinu
-  echo "* * * * * /bin/sh /etc/shinu/checker.sh" >> cronshinu
+  echo "*/5 * * * * /bin/sh /etc/shinu/checker.sh" >> cronshinu
   crontab cronshinu
   rm cronshinu
   #Extras
