@@ -78,7 +78,7 @@ if [ -e /etc/slowdns ];
   crontab cronshinu
   rm cronshinu
  else
-  #Do nothing
+  echo "Do Nothing..."
 fi
 Chcker
 chmod +x /etc/shinu/checker.sh
