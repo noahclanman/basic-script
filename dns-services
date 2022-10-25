@@ -2,7 +2,7 @@
 
 cat <<'EOFa' > /usr/sbin/dnstt.sh
 #!/bin/bash
-/etc/slowdns/./startdns
+/etc/slowdns/./restartdns
 EOFa
 chmod +x /usr/sbin/dnstt.sh
 
