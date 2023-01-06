@@ -19,7 +19,7 @@ cat <<'LAMISA' > /etc/shinu/slowdns-iptables.sh
 iptables-restore < /etc/iptables/shinu-rules.v4
 iptables -I INPUT -p udp --dport 5300 -j ACCEPT
 iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
-#iptables -A IN_public_allow -p tcp -m tcp --dport 10000 -m conntrack --ctstate NEW,UNTRACKED -j ACCEPT
+iptables -A IN_public_allow -p tcp -m tcp --dport 10000 -m conntrack --ctstate NEW,UNTRACKED -j ACCEPT
 iptables-save > /etc/iptables/rules.v4
 LAMISA
 chmod +x /etc/shinu/slowdns-iptables.sh
