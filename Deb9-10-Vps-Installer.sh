@@ -84,7 +84,7 @@ if [[ $(ps -ef | grep slowdns | grep 'SCREEN') ]] ;
   echo "Do Nothing..."
 fi
 Chcker
-chmod +x /etc/shinu/checker.sh
+chmod u+x /etc/shinu/checker.sh
 }
 
 function ip_address(){
